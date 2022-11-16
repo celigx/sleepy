@@ -13,7 +13,7 @@ const ChooseTime = () => {
         <button className="bg-blue-900 rounded-lg px-6 py-3 hover:bg-blue-700 ease-in duration-200">Wake up</button>
       </div>
 
-      <input type="time" className="flex justify-center rounded-lg mx-auto mb-8" />
+      <input type="time" className="flex justify-center bg-transparent border-solid border-2 border-blue-100 rounded-lg w-full p-2 mx-auto mb-8" />
 
       <div className="mb-8">
         <h1 className="text-2xl mb-8">Suggestion</h1>
