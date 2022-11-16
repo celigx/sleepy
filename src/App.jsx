@@ -1,7 +1,12 @@
 import "./App.css";
+import ChooseTime from "./components/SelectTime";
 
 function App() {
-  return <div className="App"></div>;
+  return (
+    <div className="">
+      <ChooseTime />
+    </div>
+  );
 }
 
 export default App;
