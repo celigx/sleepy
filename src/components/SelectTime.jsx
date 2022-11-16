@@ -9,8 +9,8 @@ const ChooseTime = () => {
       </div>
 
       <div className="flex justify-center mb-8">
-        <button className="bg-blue-900 rounded-lg px-6 py-3 mr-8">Bedtime</button>
-        <button className="bg-blue-900 rounded-lg px-6 py-3">Wake up</button>
+        <button className="bg-blue-900 rounded-lg px-6 py-3 mr-8 hover:bg-blue-700 ease-in duration-200">Bedtime</button>
+        <button className="bg-blue-900 rounded-lg px-6 py-3 hover:bg-blue-700 ease-in duration-200">Wake up</button>
       </div>
 
       <input type="time" className="flex justify-center rounded-lg mx-auto mb-8" />
@@ -20,7 +20,7 @@ const ChooseTime = () => {
         <SuggestionButton />
         <SuggestionButton />
       </div>
-      <button className="bg-indigo-400 text-blue-900 text-xl rounded-xl w-full px-6 py-3">Suggest</button>
+      <button className="bg-indigo-400 text-blue-900 text-xl rounded-xl w-full px-6 py-3 hover:bg-indigo-300 ease-in duration-200">Suggest</button>
     </div>
   );
 };
