@@ -27,11 +27,14 @@ const OutputTime = () => {
 
   // Calculate optimal times to go to sleep or wake up
   const handleOptimalTime = (minutes) => {
+    const addSleepCycle = dayjs(getTime).add(minutes, "m").add(add15min, "m").format("HH:mm");
+    const subtractSleepCycle = dayjs(getTime).subtract(minutes, "m").subtract(add15min, "m").format("HH:mm");
+
     if (bedtime) {
-      return dayjs(getTime).add(minutes, "m").add(add15min, "m").format("HH:mm");
+      return addSleepCycle;
     }
 
-    return dayjs(getTime).subtract(minutes, "m").subtract(add15min, "m").format("HH:mm");
+    return subtractSleepCycle;
   };
 
   // Calculate total sleep time
