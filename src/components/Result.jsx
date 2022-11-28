@@ -35,12 +35,20 @@ const OutputTime = () => {
   };
 
   // Calculate total sleep time
-  const handleSleepLength = (adjustSleepTime) => {
+  const handleSleepLength = (minutes) => {
     const oldTime = dayjs(getTime);
     const newTime = dayjs(getTime).add(sixthCycle, "m");
-    const difference = newTime.diff(oldTime, "h");
+    const differenceInMinutes = newTime.diff(oldTime, "m");
+    const totalDifferenceInMinutes = differenceInMinutes - minutes;
 
-    return `${difference - adjustSleepTime} hours`;
+    const getHours = Math.floor(totalDifferenceInMinutes / 60);
+    const getMinutes = totalDifferenceInMinutes % 60;
+
+    if (getMinutes === 0) {
+      return `${getHours} hours`;
+    }
+
+    return `${getHours} hr ${getMinutes} min`;
   };
 
   // Calculate sleep quality
@@ -57,23 +65,23 @@ const OutputTime = () => {
       return setOptimalTime([
         {
           id: nanoid(),
-          title: "Bedtime",
+          title: "Wakeup",
           optimalSleepTime: handleOptimalTime(sixthCycle),
           sleepLength: handleSleepLength(0),
-          sleepQuality: handleSleepQuality(fourthCycle),
+          sleepQuality: handleSleepQuality(sixthCycle),
         },
         {
           id: nanoid(),
-          title: "Bedtime",
+          title: "Wakeup",
           optimalSleepTime: handleOptimalTime(fifthCycle),
           sleepLength: handleSleepLength(1),
-          sleepQuality: handleSleepQuality(fourthCycle),
+          sleepQuality: handleSleepQuality(fifthCycle),
         },
         {
           id: nanoid(),
-          title: "Bedtime",
+          title: "Wakeup",
           optimalSleepTime: handleOptimalTime(fourthCycle),
-          sleepLength: handleSleepLength(2),
+          sleepLength: handleSleepLength(180),
           sleepQuality: handleSleepQuality(fourthCycle),
         },
       ]);
@@ -82,23 +90,23 @@ const OutputTime = () => {
     setOptimalTime([
       {
         id: nanoid(),
-        title: "Wakeup",
+        title: "Bedtime",
         optimalSleepTime: handleOptimalTime(sixthCycle),
         sleepLength: handleSleepLength(0),
         sleepQuality: handleSleepQuality(sixthCycle),
       },
       {
         id: nanoid(),
-        title: "Wakeup",
+        title: "Bedtime",
         optimalSleepTime: handleOptimalTime(fifthCycle),
-        sleepLength: handleSleepLength(1),
+        sleepLength: handleSleepLength(90),
         sleepQuality: handleSleepQuality(fifthCycle),
       },
       {
         id: nanoid(),
-        title: "Wakeup",
+        title: "Bedtime",
         optimalSleepTime: handleOptimalTime(fourthCycle),
-        sleepLength: handleSleepLength(2),
+        sleepLength: handleSleepLength(180),
         sleepQuality: handleSleepQuality(fourthCycle),
       },
     ]);
