@@ -77,7 +77,7 @@ const OutputTime = () => {
           id: nanoid(),
           title: "Wakeup",
           optimalSleepTime: handleOptimalTime(fifthCycle),
-          sleepLength: handleSleepLength(1),
+          sleepLength: handleSleepLength(90),
           sleepQuality: handleSleepQuality(fifthCycle),
         },
         {
