@@ -64,50 +64,26 @@ const OutputTime = () => {
 
   // Calculate optimal sleep or wake times
   const calculateOptimalTime = () => {
-    if (bedtime) {
-      return setOptimalTime([
-        {
-          id: nanoid(),
-          title: "Wakeup",
-          optimalSleepTime: handleOptimalTime(sixthCycle),
-          sleepLength: handleSleepLength(0),
-          sleepQuality: handleSleepQuality(sixthCycle),
-        },
-        {
-          id: nanoid(),
-          title: "Wakeup",
-          optimalSleepTime: handleOptimalTime(fifthCycle),
-          sleepLength: handleSleepLength(90),
-          sleepQuality: handleSleepQuality(fifthCycle),
-        },
-        {
-          id: nanoid(),
-          title: "Wakeup",
-          optimalSleepTime: handleOptimalTime(fourthCycle),
-          sleepLength: handleSleepLength(180),
-          sleepQuality: handleSleepQuality(fourthCycle),
-        },
-      ]);
-    }
+    const title = bedtime ? "Wakeup" : "Bedtime";
 
     setOptimalTime([
       {
         id: nanoid(),
-        title: "Bedtime",
+        title: title,
         optimalSleepTime: handleOptimalTime(sixthCycle),
         sleepLength: handleSleepLength(0),
         sleepQuality: handleSleepQuality(sixthCycle),
       },
       {
         id: nanoid(),
-        title: "Bedtime",
+        title: title,
         optimalSleepTime: handleOptimalTime(fifthCycle),
         sleepLength: handleSleepLength(90),
         sleepQuality: handleSleepQuality(fifthCycle),
       },
       {
         id: nanoid(),
-        title: "Bedtime",
+        title: title,
         optimalSleepTime: handleOptimalTime(fourthCycle),
         sleepLength: handleSleepLength(180),
         sleepQuality: handleSleepQuality(fourthCycle),
