@@ -1,3 +1,7 @@
 .App {
   text-align: center;
 }
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%) contrast(65%);
+}
