@@ -39,11 +39,12 @@ const OutputTime = () => {
 
   // Calculate total sleep time
   const handleSleepLength = (minutes) => {
-    const oldTime = dayjs(getTime);
-    const newTime = dayjs(getTime).add(sixthCycle, "m");
-    const differenceInMinutes = newTime.diff(oldTime, "m");
+    // Get selected time + sixthCycle
+    const updatedTime = dayjs(getTime).add(sixthCycle, "m");
+    const differenceInMinutes = updatedTime.diff(getTime, "m");
     const totalDifferenceInMinutes = differenceInMinutes - minutes;
 
+    // Format time (07 hours / 07 hr 10 min)
     const getHours = Math.floor(totalDifferenceInMinutes / 60);
     const getMinutes = totalDifferenceInMinutes % 60;
 
