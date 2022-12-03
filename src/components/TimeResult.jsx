@@ -1,10 +1,5 @@
-import { useRecoilValue } from "recoil";
-import { bedtimeState } from "../atoms";
-
 const OutputTimeResult = ({ item }) => {
   const { title, optimalSleepTime, sleepLength, sleepQuality } = item;
-
-  const bedtime = useRecoilValue(bedtimeState);
 
   return (
     <div className="container mx-auto bg-blue-900 flex items-center justify-between px-3 py-3 rounded-xl mb-8">
