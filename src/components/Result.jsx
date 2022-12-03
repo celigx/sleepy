@@ -12,6 +12,7 @@ const OutputTime = () => {
 
   useEffect(() => {
     calculateOptimalTime();
+    // eslint-disable-next-line
   }, [bedtime, time]);
 
   const getTime = dayjs().format(`YYYY-MM-DD ${time}`);
