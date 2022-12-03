@@ -1,5 +1,6 @@
 {
   "name": "sleep-calculator-tailwind",
+  "homepage": "https://celigx.github.io/sleepy",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
