@@ -60,9 +60,13 @@ const ChooseTime = () => {
       </div>
 
       <div className="">
-        <p className="text-md mb-2">Choose time</p>
+        <label htmlFor="time" className="text-md block mb-2">
+          Choose time
+        </label>
         <input
           type="time"
+          id="time"
+          name="time"
           className="flex justify-center bg-transparent border-solid border-2 rounded-lg w-full p-2 mx-auto mb-8"
           style={{ borderColor: "#ABBAED" }}
           value={input}
