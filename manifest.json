@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Sleepy",
+  "name": "Estimate the best time to wake up or to go to bed",
   "icons": [
     {
       "src": "favicon.ico",

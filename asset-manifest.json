@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/sleepy/static/css/main.8e0959c2.css",
-    "main.js": "/sleepy/static/js/main.52715831.js",
+    "main.css": "/sleepy/static/css/main.5088ad7b.css",
+    "main.js": "/sleepy/static/js/main.f8d6f63d.js",
     "static/js/787.28debf80.chunk.js": "/sleepy/static/js/787.28debf80.chunk.js",
     "index.html": "/sleepy/index.html",
-    "main.8e0959c2.css.map": "/sleepy/static/css/main.8e0959c2.css.map",
-    "main.52715831.js.map": "/sleepy/static/js/main.52715831.js.map",
+    "main.5088ad7b.css.map": "/sleepy/static/css/main.5088ad7b.css.map",
+    "main.f8d6f63d.js.map": "/sleepy/static/js/main.f8d6f63d.js.map",
     "787.28debf80.chunk.js.map": "/sleepy/static/js/787.28debf80.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e0959c2.css",
-    "static/js/main.52715831.js"
+    "static/css/main.5088ad7b.css",
+    "static/js/main.f8d6f63d.js"
   ]
 }
